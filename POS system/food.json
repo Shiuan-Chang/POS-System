@@ -1,0 +1,152 @@
+{
+    "foods": [
+      {
+        "id": 1,
+        "type": "主餐",
+        "items": [ "雞排飯$80", "排骨飯$65", "咖哩飯$70", "日式拉麵$90", "宮保雞丁燴飯$85" ]
+      },
+      {
+        "id": 2,
+        "type": "副餐",
+        "items": [ "薯條$30", "豆腐$20", "海帶$20", "燙青菜$40", "皮蛋$15" ]
+      },
+      {
+        "id": 3,
+        "type": "飲料",
+        "items": [ "現淬紅茶$20", "奶茶$25", "現淬綠茶$20", "仙草茶$30", "激浪氣泡飲$40" ]
+      },
+      {
+        "id": 4,
+        "type": "甜點",
+        "items": [ "豆花$30", "果凍$15", "麻糬$20", "蕨餅$20", "雞蛋糕$20" ]
+      },
+      {
+        "id": 5,
+        "type": "素食餐點",
+        "items": [ "菜飯$60", "蔬菜豆腐煲$80", "豆腐漢堡$50" ]
+      }
+    ],
+    "discount": [
+      {
+        "key": "任一主餐買三送二",
+        "value": "POS_system.Strategies.Items.BuyTwoGetOneFree",
+        "isActive": true,
+        "food": {
+          "mainFood": [ "雞排飯", "排骨飯", "咖哩飯", "日式拉麵", "宮保雞丁燴飯" ],
+          "subFood": [],
+          "drink": [],
+          "dessert": []
+        },
+        "giftnumber": {
+          "buyCount": 3,
+          "giftCount": 2
+        },
+        "discount": {
+          "discountPrice": 0,
+          "discountPercentage": 0,
+          "allDiscountPercentage": 0
+        }
+      },
+      {
+        "key": "任一主餐搭配任一飲料",
+        "value": "POS_system.Strategies.Items.MainFoodWithDrink",
+        "isActive": true,
+        "food": {
+          "mainFood": [ "雞排飯", "排骨飯", "咖哩飯", "日式拉麵", "宮保雞丁燴飯" ],
+          "subFood": [],
+          "drink": [ "現淬紅茶", "奶茶", "現淬綠茶", "仙草茶", "激浪氣泡飲" ],
+          "dessert": []
+        },
+        "giftnumber": {
+          "buyCount": 0,
+          "giftCount": 0
+        },
+        "discount": {
+          "discountPrice": 80,
+          "discountPercentage": 0,
+          "allDiscountPercentage": 0
+        }
+      },
+      {
+        "key": "任兩份主餐送雞蛋糕",
+        "value": "POS_system.Strategies.Items.TwoMainFoodWithMochi",
+        "isActive": true,
+        "food": {
+          "mainFood": [ "雞排飯", "排骨飯", "咖哩飯", "日式拉麵", "宮保雞丁燴飯" ],
+          "subFood": [],
+          "drink": [],
+          "dessert": [ "雞蛋糕" ]
+        },
+        "giftnumber": {
+          "buyCount": 2,
+          "giftCount": 1
+        },
+        "discount": {
+          "discountPrice": 0,
+          "discountPercentage": 0,
+          "allDiscountPercentage": 0
+        }
+      },
+      {
+        "key": "任三份主餐打8折",
+        "value": "POS_system.Strategies.Items.ThreeMainFoodWith85discount",
+        "isActive": true,
+        "food": {
+          "mainFood": [ "雞排飯", "排骨飯", "咖哩飯", "日式拉麵", "宮保雞丁燴飯" ],
+          "subFood": [],
+          "drink": [],
+          "dessert": []
+        },
+        "giftnumber": {
+          "buyCount": 2,
+          "giftCount": 1
+        },
+        "discount": {
+          "discountPrice": 0,
+          "discountPercentage": 0.8,
+          "allDiscountPercentage": 0
+        }
+      },
+
+      {
+        "key": "任一主餐搭配配皮蛋",
+        "value": "POS_system.Strategies.Items.MainFoodWithEgg",
+        "isActive": true,
+        "food": {
+          "mainFood": [ "雞排飯", "排骨飯", "咖哩飯", "日式拉麵", "宮保雞丁燴飯" ],
+          "subFood": [ "皮蛋" ],
+          "drink": [],
+          "dessert": []
+        },
+        "giftnumber": {
+          "buyCount": 2,
+          "giftCount": 1
+        },
+        "discount": {
+          "discountPrice": 60,
+          "discountPercentage": 0,
+          "allDiscountPercentage": 0
+        }
+      },
+      {
+        "key": "所有品項8折",
+        "value": "POS_system.Strategies.Items.DiscountForAllItems",
+        "isActive": true,
+        "food": {
+          "mainFood": [],
+          "subFood": [],
+          "drink": [],
+          "dessert": []
+        },
+        "giftnumber": {
+          "buyCount": 2,
+          "giftCount": 1
+        },
+        "discount": {
+          "discountPrice": 0,
+          "discountPercentage": 0,
+          "allDiscountPercentage": 0.8
+        }
+      }
+    ]
+  }
